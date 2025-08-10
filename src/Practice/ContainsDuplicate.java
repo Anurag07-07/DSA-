@@ -3,22 +3,48 @@ package Practice;
 import java.util.Arrays;
 
 public class ContainsDuplicate {
-    public static int[] ConcatenationofArrayBrute(int[] arr) {
-        //Create new Array of 2n size
-        int n = arr.length;
-        int[] ans = new int[2*n];
+    public static boolean ContainsDuplicateBrute(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int value = arr[i];
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[j]==value){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
-        //Insert Element in Array
-        for (int i = 0; i < n; i++) {
-            ans[i] = ans[n+i] = arr[i];
+    public static boolean ContainsDuplicateBetter(int[] arr) {
+        //Sort The array
+        Arrays.sort(arr);
+
+        //Iterate over and check if the previous equal to next
+        for (int i = 0; i < arr.length-1; i++) {
+            if (arr[i]==arr[i+1]){
+                return true;
+            }
         }
 
-        return ans;
+        return  false;
     }
+
+//    public static boolean ContainsDuplicateOptimal(int[] arr) {
+//        //Using Hashmap
+//        //Not learned Now
+//    }
+
+
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,1};
-        int[] ans = ConcatenationofArrayBrute(nums);
-        System.out.println(Arrays.toString(ans));
+//        boolean ans = ContainsDuplicateBrute(nums);
+        boolean ans = ContainsDuplicateBetter(nums);
+
+        if (ans){
+            System.out.println("Contains Duplicate");
+        }else {
+            System.out.println("Not Contains Duplicate");
+        }
     }
 }
