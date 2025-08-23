@@ -22,6 +22,5 @@ public class PrefixSumofEvenIndices {
         }
 
         System.out.println(Arrays.toString(psum));
-
     }
 }
