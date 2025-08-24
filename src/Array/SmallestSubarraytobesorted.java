@@ -60,7 +60,6 @@ public class SmallestSubarraytobesorted {
         while (arr[i]<=min) i++;
         int j = arr.length-1;
         while (arr[j]>=max) j--;
-
         System.out.println(i+" "+j);
 
     }
