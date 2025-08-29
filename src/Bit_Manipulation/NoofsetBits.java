@@ -5,22 +5,20 @@ import java.util.Scanner;
 public class NoofsetBits {
     public static void Brute(int no) {
         int cnt = 0;
-        while (no!=0){
+        while(no!=0){
             int rem = no%2;
-            cnt+=rem;
+            cnt = cnt+rem;
             no/=2;
         }
-
         System.out.println("The Total Set Bit is "+cnt);
     }
 
     public static void BIT_Manipulation(int no) {
         int cnt = 0;
-        while(no!=0){
-            cnt = cnt + (no&1);
-            no = no>>1;
+        while (no!=0){
+            cnt = cnt+(no&1);
+            no =no>>1;
         }
-
         System.out.println("The Total Set Bits is "+cnt);
     }
 

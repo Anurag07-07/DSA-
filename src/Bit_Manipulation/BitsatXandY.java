@@ -9,6 +9,6 @@ public class BitsatXandY {
         int X  = sc.nextInt();
         System.out.println("Enter the Y");
         int Y = sc.nextInt();
-        System.out.println("The Sum is "+((X<<1)|(Y<<1)));
+        System.out.println("The Answer is "+((1<<X)|(1<<Y)));
     }
 }
