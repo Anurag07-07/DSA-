@@ -9,7 +9,7 @@ public class FindIthBitValue {
 
     public static void Using_leftShift(int no,int i) {
         int mask = 1<<i;
-        int ans = no & mask;
+        int ans = (no & mask)!=0 ? 1 : 0;
         System.out.println("The Answer is "+ans);
     }
     public static void main(String[] args) {
