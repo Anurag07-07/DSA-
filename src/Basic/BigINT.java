@@ -18,5 +18,13 @@ public class BigINT {
         BigInteger ten = BigInteger.valueOf(10);
         System.out.println(ten);
         System.out.println(ten.pow(100));
+
+        int num = 50;
+        BigInteger ans = BigInteger.valueOf(1);
+        for (int i = 1; i <= num; i++) {
+            ans = ans.multiply(BigInteger.valueOf(i));
+        }
+
+        System.out.println(ans);
     }
 }
