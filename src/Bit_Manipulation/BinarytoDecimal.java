@@ -5,17 +5,15 @@ import java.util.Scanner;
 public class BinarytoDecimal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int binary = sc.nextInt();
-
+        int n = sc.nextInt();
         int ans = 0,power = 1;
-        while (binary!=0){
-            //Find the Last Digit
-            int last = binary%10;
+        while (n!=0){
+            int last = n%10;
             ans = ans + last*power;
             power = power*2;
-            binary/=10;
+            n /= 10;
         }
 
-        System.out.println("the Decimal Value is "+ans);
+        System.out.println("the Number is " + ans);
     }
 }

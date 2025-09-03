@@ -24,7 +24,9 @@ public class BigINT {
         for (int i = 1; i <= num; i++) {
             ans = ans.multiply(BigInteger.valueOf(i));
         }
-
         System.out.println(ans);
+
+        System.out.println(ans.gcd(BigInteger.valueOf(50)));
+        System.out.println(ans.mod(BigInteger.valueOf(50)));
     }
 }
