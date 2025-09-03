@@ -9,9 +9,10 @@ public class Secondlargest {
             if (x>max){
                 s_max = max;
                 max = x;
+            } else if (x<max && x> s_max) {
+                s_max = x;
             }
         }
-
         System.out.println(s_max);
     }
 }
