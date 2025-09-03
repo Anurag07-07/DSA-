@@ -12,7 +12,6 @@ public class NoofSetBits {
             ans += rem;
             n/=2;
         }
-
         System.out.println(ans);
     }
 
