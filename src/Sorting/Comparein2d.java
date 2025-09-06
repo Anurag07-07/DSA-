@@ -1,12 +1,15 @@
 package Sorting;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Comparein2d {
     public static void main(String[] args) {
         int[][] coordinates = {{1,2},{3,4},{0,2},{1,4}};
         //Sort According to the x values
         Arrays.sort(coordinates,(int[] o1,int[] o2)->(o1[0]-o2[0]));
+        //So Bascially Comparator convert array into object and we pass key on which basis the array is compared here it o[0]
+        Arrays.sort(coordinates,Comparator.comparingInt((int[] o)-> o[0]));
         //Print 2d Array
         System.out.println(Arrays.deepToString(coordinates));
 
