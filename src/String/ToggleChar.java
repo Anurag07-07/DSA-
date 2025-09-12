@@ -13,7 +13,6 @@ public class ToggleChar {
                 s[i] = (char)(s[i]-32);
             }
         }
-
         System.out.println(Arrays.toString(s));
     }
 }
