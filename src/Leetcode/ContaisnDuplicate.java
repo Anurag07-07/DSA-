@@ -61,20 +61,20 @@ public class ContaisnDuplicate {
         return false;
     }
 
-//    public static boolean Optimal(int[] nums ) {
-//        HashSet<Integer> s = new HashSet<>();
-//        for (Integer x: nums){
-//            if (s.contains(x)){
-//                return true;
-//            }
-//            s.add(x);
-//        }
-//        return false;
-//    }
+    public static boolean Optimal(int[] nums ) {
+        HashSet<Integer> s = new HashSet<>();
+        for (Integer x: nums){
+            if (s.contains(x)){
+                return true;
+            }
+            s.add(x);
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,1};
-        if (Better(arr)){
+        if (Optimal(arr)){
             System.out.println("Contains Duplicate");
         }else {
             System.out.println("Not Contains Duplicate");
