@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.Arrays;
+
 /*
 Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
 
@@ -34,6 +36,12 @@ n == nums.length
  */
 public class ConcatenationofArrays {
     public static void main(String[] args) {
+        int[] arr = {1,2,3,1};
+        int[] ans= new int[arr.length*2];
+        for (int i = 0; i < arr.length; i++) {
+            ans[i] = ans[arr.length+i] = arr[i];
+        }
 
+        System.out.println(Arrays.toString(ans));
     }
 }
