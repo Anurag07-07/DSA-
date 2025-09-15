@@ -53,13 +53,13 @@ public class ContaisnDuplicate {
         return false;
     }
 
-//    public static boolean Better(int[] nums) {
-//        Arrays.sort(nums);
-//        for (int i = 1; i < nums.length ; i++) {
-//            if (nums[i]==nums[i-1]) return true;
-//        }
-//        return false;
-//    }
+    public static boolean Better(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 1; i < nums.length ; i++) {
+            if (nums[i]==nums[i-1]) return true;
+        }
+        return false;
+    }
 
 //    public static boolean Optimal(int[] nums ) {
 //        HashSet<Integer> s = new HashSet<>();
@@ -74,7 +74,7 @@ public class ContaisnDuplicate {
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,1};
-        if (Brute(arr)){
+        if (Better(arr)){
             System.out.println("Contains Duplicate");
         }else {
             System.out.println("Not Contains Duplicate");
