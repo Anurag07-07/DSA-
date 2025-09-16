@@ -34,6 +34,8 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
+import java.util.HashMap;
+
 public class TwoSum {
 
     public static int Binary_Search(int[] arr,int target) {
@@ -62,12 +64,34 @@ public class TwoSum {
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void Better(int[] arr,int target) {
+        for (int i = 0; i < arr.length; i++) {
+            int value = target-arr[i];
+            int ans = Binary_Search(arr,value);
+            if (ans!=-1){
+                System.out.println(i+" "+ans);
+                break;
+            }
+        }
     }
-    
+
+    public static void Optimal(int[] arr,int target) {
+        HashMap<Integer,Integer> h = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            int complement=target-arr[i];
+            if(h.containsKey(complement)){
+//                return new int[]{h.get(complement),i};
+            }
+            h.put(arr[i],i);
+        }
+//        return new int[]{0};
+    }
+
+
     public static void main(String[] args) {
         int[] arr = {2,7,11,15};
-        Brute(arr,9);
+//        Brute(arr,9);
+//        Better(arr,9);
+        Optimal(arr,9);
     }
 }
