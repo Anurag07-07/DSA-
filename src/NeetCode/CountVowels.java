@@ -24,7 +24,6 @@ public class CountVowels {
                 psum[i] = cnt;
             }
         }
-
         int[] count = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
             int start = queries[i][0];

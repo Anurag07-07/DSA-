@@ -8,7 +8,6 @@ public class ScoreofString {
         for (int i = 0; i < s.length()-1; i++) {
             sum = sum +Math.abs(arr[i]-arr[i+1]);
         }
-
         System.out.println(sum);
     }
 
